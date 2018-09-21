@@ -1,6 +1,6 @@
 #Deploy JDK1.7.80
 FROM centos:latest
-LABEL maintainer="sanqimei:<zhuxuyue@sanqimei.com>"
+LABEL maintainer="sanqimei:<zhuxuyue@gmail.com>"
 ARG JDK_VERSION=jdk1.7.0_80
 ARG TOMCAT_VERSION=apache-tomcat-7.0.90
 ADD jdk-7u80-linux-x64.tar.gz /usr/local/
