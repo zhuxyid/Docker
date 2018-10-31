@@ -14,3 +14,9 @@ CMD ["/bin/bash","-c","bin/startup.sh && tail -f logs/catalina.out"]
 
 #docker build -t tomcat_v1 .
 #docker run --name CONTAINER_NAME -d tomcat_v1
+
+#docker run --name test -it -p 8080:8080 -d --privileged=true --restart=always \
+            -v /etc/localtime:/etc/localtime:ro \
+            -v /etc/timezone:/etc/timezone \
+            -v /usr/local/docker/{name}/{name}:/usr/local/apache-tomcat-7.0.90/webapps/{name} \
+            -v /usr/local/docker/{name}/logs:/usr/local/apache-tomcat-7.0.90/logs tomcat_v1
