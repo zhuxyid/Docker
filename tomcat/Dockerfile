@@ -11,3 +11,6 @@ ENV PATH $PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 WORKDIR /usr/local/${TOMCAT_VERSION}
 RUN ["/bin/bash","-c","rm -rf webapps/{docs,examples,host-manager,manager}"]
 CMD ["/bin/bash","-c","bin/startup.sh && tail -f logs/catalina.out"]
+
+#docker build -t tomcat_v1 .
+#docker run --name CONTAINER_NAME -d tomcat_v1
